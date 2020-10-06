@@ -1,0 +1,14 @@
+C:\Users\asus\source\repos\ManageProducts\ManageProducts.Data\bin\Debug\ManageProducts.Data.dll
+C:\Users\asus\source\repos\ManageProducts\ManageProducts.Data\bin\Debug\ManageProducts.Data.pdb
+C:\Users\asus\source\repos\ManageProducts\ManageProducts.Data\bin\Debug\ManageProducts.Domain.dll
+C:\Users\asus\source\repos\ManageProducts\ManageProducts.Data\bin\Debug\ManageProducts.Domain.pdb
+C:\Users\asus\source\repos\ManageProducts\ManageProducts.Data\obj\Debug\ManageProducts.Data.csprojAssemblyReference.cache
+C:\Users\asus\source\repos\ManageProducts\ManageProducts.Data\obj\Debug\ManageProducts.Data.csproj.CopyComplete
+C:\Users\asus\source\repos\ManageProducts\ManageProducts.Data\obj\Debug\ManageProducts.Data.dll
+C:\Users\asus\source\repos\ManageProducts\ManageProducts.Data\obj\Debug\ManageProducts.Data.pdb
+C:\Users\asus\source\repos\ManageProducts\ManageProducts.Data\bin\Debug\ManageProducts.Data.dll.config
+C:\Users\asus\source\repos\ManageProducts\ManageProducts.Data\bin\Debug\EntityFramework.dll
+C:\Users\asus\source\repos\ManageProducts\ManageProducts.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\asus\source\repos\ManageProducts\ManageProducts.Data\bin\Debug\ManageProducts.Domain.dll.config
+C:\Users\asus\source\repos\ManageProducts\ManageProducts.Data\bin\Debug\EntityFramework.xml
+C:\Users\asus\source\repos\ManageProducts\ManageProducts.Data\bin\Debug\EntityFramework.SqlServer.xml
