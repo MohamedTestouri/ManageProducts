@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ManageProducts.Data",
+    "\\ManageProducts.Data\\Properties"
   ],
+  "SelectedNode": "\\ManageProducts.Data",
   "PreviewInSolutionExplorer": false
 }
