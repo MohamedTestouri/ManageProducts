@@ -80,9 +80,15 @@ namespace ManageProducts.Service.Repositories
         }
         public IEnumerable<Chemical> GetChemicalByCity(string city)
         {
-            return from product in context.Products.OfType<Chemical>()
+            /*return from product in context.Products.OfType<Chemical>()
+              where products.City.Equals(city)
                    orderby product.City ascending
-                   select product;
+                   select product;*/ 
+                   //lamda:
+            return context.Products
+                .OfType<Chemical>()
+                .Where(p=>p.City.Equals(city))
+                .OrderBy(p => p.City);
         }
         public void GetChemicalBroupByCity()
         {
