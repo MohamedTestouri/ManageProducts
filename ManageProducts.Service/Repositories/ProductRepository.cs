@@ -3,8 +3,6 @@ using ManageProducts.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ManageProducts.Service.Repositories
 {
@@ -32,10 +30,14 @@ namespace ManageProducts.Service.Repositories
 
         public IEnumerable<Chemical> Get5ChemicalByPrice(double price)
         {
-            var query = from Product in context.Products.OfType<Chemical>()
+            /*var query = from Product in context.Products.OfType<Chemical>()
                         where Product.Price > price
                         select Product;
-            return query.Take(5);
+            return query.Take(5);*/
+            return context.Products
+                .OfType<Chemical>()
+                .Where(p => p.Price > price)
+                .Take(5);
         }
 
         public IEnumerable<Product> GetProductPrice(double price)
@@ -52,19 +54,23 @@ namespace ManageProducts.Service.Repositories
 
         public double GetAveragePrice()
         {
-            return (from Product in context.Products
-                    select Product.Price).Average();
+            /* return (from Product in context.Products
+                     select Product.Price).Average();*/
+            return context.Products.Average(p => p.Price);
 
         }
 
         public Product GetProductByMaxPrice()
         {
-            var maxPrice = (from product in context.Products
+            /*var maxPrice = (from product in context.Products
                             select product.Price).Max();
             var query = from product in context.Products
-                        where product.Price == (double)maxPrice
+                        where product.Price == maxPrice
                         select product;
-            return query.FirstOrDefault();
+            return query.FirstOrDefault();*/
+        
+            double maxPrice = context.Products.Max(p => p.Price);
+            return context.Products.FirstOrDefault(p => p.Price == maxPrice);
         }
         public double GetCountProduct()
         {
