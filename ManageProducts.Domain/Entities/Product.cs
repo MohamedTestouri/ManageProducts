@@ -8,59 +8,51 @@ namespace ManageProducts.Domain.Entities
 {
     public class Product
     {
-        //Pro de base
+        //prop + double tab : light version
+        public int ProductId { get; set; }
+        public int Quantity { get; set; }
+        public double Price { get; set; }
         public DateTime DateProd { get; set; }
         public string Description { get; set; }
         public string Name { get; set; }
-        public double Price { get; set; }
-        public int ProductId { get; set; }
-        public int Quantity { get; set; }
+        /* propfull+ double tab : full version (if we need to override the var)
+        private int ProductId;
+        public int MyProperty
+        {
+            get { return ProductId; }
+            set { ProductId = value; }
+        }*/
 
-        // prop de navigation
-        //public List<Provider> Providers { get; set; }
+        //navigation prop
+        /*List: 
+        public List<Provider> Providers { get; set;}
+         */
+        // ICollection
         public virtual ICollection<Provider> Providers { get; set; }
         public virtual Category Category { get; set; }
-        //constr ctor + doublr tab
+        // ctor + double tab : construct 
         public Product()
         {
 
         }
 
-        public Product(DateTime dateProd, string description, string name, 
-            double price, int productId, int quantity)
+        public Product(int productId, int quantity, double price, DateTime dateProd, string description, string name)
         {
+            ProductId = productId;
+            Quantity = quantity;
+            Price = price;
             DateProd = dateProd;
             Description = description;
             Name = name;
-            Price = price;
-            ProductId = productId;
-            Quantity = quantity;
         }
-
         public override string ToString()
         {
-            return "DateProd = " + DateProd
-                + "Description = "+ Description
-                + "Name = "+ Name
-                + "Price = "+ Price
-                + "ProductId = "+ ProductId
-                + "Quantity = "+ Quantity;
+            return "Id: " + ProductId
+                + " Quantity: " + Quantity
+                + " Price: " + Price
+                + " Date: " + DateProd
+                + " Description: " + Description
+                + " Name: " + Name;
         }
-
-    }
-     public class Exemple
-    {
-        // prop + double tab  :light version
-        public int MyProperty { get; set; }
-        //propfull + double tab : full version
-        private int age;
-        public int MyProperty2
-        {
-            get { return age; }
-            set { age = value; }
-        }
-        //propg : secure version
-        public int MyProperty3 { get; private set; }
-
     }
 }

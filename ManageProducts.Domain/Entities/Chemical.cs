@@ -19,7 +19,7 @@ namespace ManageProducts.Domain.Entities
         public Chemical(DateTime dateProd, string description, string name,
             double price, int productId, int quantity,/*product*/
             string city, string labName, string streetAddress/*chemical*/)
-            :base(dateProd,description,name,price,productId,quantity)/*const product*/
+            :base(productId,quantity,price, dateProd,description,name)/*const product*/
         {
             City = city;
             LabName = labName;

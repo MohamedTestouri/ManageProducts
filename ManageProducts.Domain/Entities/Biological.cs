@@ -9,5 +9,7 @@ namespace ManageProducts.Domain.Entities
     public class Biological:Product
     {
         public string Herbs { get; set; }
+        public Biological() {
+        }
     }
 }
